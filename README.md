@@ -1,79 +1,105 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# MetaKeep Demo App
 
-# Getting Started
+React Native demo application on android that demonstrates the integration of the MetaKeep SDK.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Configuration Required
 
-## Step 1: Start the Metro Server
+**Before running this app, you must configure your own MetaKeep credentials:**
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+1. **Get your App ID**: Visit [console.metakeep.xyz](https://console.metakeep.xyz) to create an account and get your App ID
+2. **Update the code**: Replace `YOUR_APP_ID_HERE` in `App.tsx` with your actual App ID
+3. **RPC URL**: The app uses `https://rpc.sepolia.org` for Sepolia testnet (already configured)
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## Setup
 
-```bash
-# using npm
-npm start
+### Prerequisites
+- React Native 0.73.0
+- Android API level 34 (Android 14) or higher
+- Java 8 or higher
+- Node.js 18 or higher
 
-# OR using Yarn
-yarn start
+
+### Android Configuration
+
+The following Android configurations have been applied:
+
+1. **Minimum SDK Version**: Set to 34 in `android/build.gradle`
+2. **Manifest Placeholders**: Configured in `android/app/build.gradle`
+3. **Intent Filter**: Added to `android/app/src/main/AndroidManifest.xml` for MetaKeep callbacks
+4. **Repositories**: Added JitPack repository for MetaKeep SDK dependencies
+
+### Installation
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. For Android:
+   ```bash
+   npx react-native run-android
+   ```
+
+## Features
+
+- MetaKeep SDK initialization with the provided app ID
+- Status display showing SDK initialization status
+- Proper Android configuration for MetaKeep integration
+
+## Project Structure
+
+```
+MetaKeepDemo/
+├── android/                 # Android-specific configuration
+├── ios/                    # iOS-specific configuration
+├── modules/                # Local modules
+│   └── MetaKeepReactNativeSDK/  # MetaKeep SDK
+├── App.tsx                 # Main application component
+└── package.json            # Dependencies and scripts
 ```
 
-## Step 2: Start your Application
+## MetaKeep SDK Usage
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+The SDK is initialized in `App.tsx` with the following code:
 
-### For Android
+```typescript
+import MetaKeep from 'metakeep-react-native-sdk';
 
-```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+useEffect(() => {
+  try {
+    // Replace 'YOUR_APP_ID_HERE' with your actual App ID from console.metakeep.xyz
+    const metakeep = new MetaKeep('YOUR_APP_ID_HERE');
+    setMetakeepInitialized(true);
+  } catch (error) {
+    console.error('Failed to initialize MetaKeep SDK:', error);
+  }
+}, []);
 ```
 
-### For iOS
+**Configuration Steps:**
+1. Sign up at [console.metakeep.xyz](https://console.metakeep.xyz)
+2. Create a new app to get your App ID
+3. Replace `YOUR_APP_ID_HERE` in the code above with your actual App ID
+4. The app will automatically use `https://rpc.sepolia.org` for Sepolia testnet
 
-```bash
-# using npm
-npm run ios
+## Troubleshooting
 
-# OR using Yarn
-yarn ios
-```
+If you encounter build issues:
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+1. Clean the project:
+   ```bash
+   cd android
+   ./gradlew clean
+   cd ..
+   ```
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+2. Reset Metro cache:
+   ```bash
+   npx react-native start --reset-cache
+   ```
 
-## Step 3: Modifying your App
+3. Ensure all Android SDK components are installed for API level 34
 
-Now that you have successfully run the app, let's modify it.
+## License
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is for demonstration purposes only.
