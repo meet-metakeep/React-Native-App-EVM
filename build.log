@@ -1,0 +1,183 @@
+
+> MetaKeepDemo@0.0.1 android
+> react-native run-android
+
+info A dev server is already running for this project on port 8081.
+info Installing the app...
+> Task :gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:inspectClassesForKotlinIC UP-TO-DATE
+
+> Configure project :app
+WARNING: The option setting 'android.enableDexingArtifactTransform.desugaring=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 8.2 of the Android Gradle plugin.
+
+> Configure project :
+Path for java installation '/usr/lib/jvm/openjdk-21' (Common Linux Locations) does not contain a java executable
+Path for java installation '/usr/lib/jvm/openjdk-21' (Common Linux Locations) does not contain a java executable
+
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :app:generatePackageList
+> Task :app:preBuild
+> Task :app:preDebugBuild
+> Task :app:generateDebugBuildConfig
+> Task :metakeep-react-native-sdk:preBuild UP-TO-DATE
+> Task :metakeep-react-native-sdk:preDebugBuild UP-TO-DATE
+> Task :react-native-get-random-values:preBuild UP-TO-DATE
+> Task :react-native-get-random-values:preDebugBuild UP-TO-DATE
+> Task :metakeep-react-native-sdk:writeDebugAarMetadata
+> Task :react-native-get-random-values:writeDebugAarMetadata
+> Task :app:generateDebugResValues
+> Task :metakeep-react-native-sdk:generateDebugResValues
+> Task :metakeep-react-native-sdk:generateDebugResources
+> Task :app:checkDebugAarMetadata FAILED
+> Task :metakeep-react-native-sdk:packageDebugResources
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+13 actionable tasks: 8 executed, 5 up-to-date
+
+info 💡 Tip: Make sure that you have set up your development environment correctly, by running npx react-native doctor. To read more about doctor command visit: https://github.com/react-native-community/cli/blob/main/packages/cli-doctor/README.md#doctor 
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:checkDebugAarMetadata'.
+> A failure occurred while executing com.android.build.gradle.internal.tasks.CheckAarMetadataWorkAction
+   > /home/passbird/.gradle/caches/transforms-3/0859cc2ebf96bc372b2c46ef5b293d59/transformed/jetified-react-android-0.73.0-debug/META-INF/com/android/build/gradle/aar-metadata.properties (No such file or directory)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 5s
+error Failed to install the app. Command failed with exit code 1: ./gradlew app:installDebug -PreactNativeDevServerPort=8081 FAILURE: Build failed with an exception. * What went wrong:
+Execution failed for task ':app:checkDebugAarMetadata'.
+> A failure occurred while executing com.android.build.gradle.internal.tasks.CheckAarMetadataWorkAction > /home/passbird/.gradle/caches/transforms-3/0859cc2ebf96bc372b2c46ef5b293d59/transformed/jetified-react-android-0.73.0-debug/META-INF/com/android/build/gradle/aar-metadata.properties (No such file or directory) * Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org. BUILD FAILED in 5s.
+info Run CLI with --verbose flag for more details.
+
+> MetaKeepDemo@0.0.1 android
+> react-native run-android
+
+info A dev server is already running for this project on port 8081.
+info Installing the app...
+Starting a Gradle Daemon, 1 stopped Daemon could not be reused, use --status for details
+Path for java installation '/usr/lib/jvm/openjdk-21' (Common Linux Locations) does not contain a java executable
+> Task :gradle-plugin:compileKotlin UP-TO-DATE
+> Task :gradle-plugin:compileJava NO-SOURCE
+> Task :gradle-plugin:pluginDescriptors UP-TO-DATE
+> Task :gradle-plugin:processResources UP-TO-DATE
+> Task :gradle-plugin:classes UP-TO-DATE
+> Task :gradle-plugin:jar UP-TO-DATE
+> Task :gradle-plugin:inspectClassesForKotlinIC UP-TO-DATE
+
+> Configure project :app
+WARNING: The option setting 'android.enableDexingArtifactTransform.desugaring=false' is deprecated.
+The current default is 'true'.
+It will be removed in version 8.2 of the Android Gradle plugin.
+Path for java installation '/usr/lib/jvm/openjdk-21' (Common Linux Locations) does not contain a java executable
+
+> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
+> Task :app:generateCodegenArtifactsFromSchema SKIPPED
+> Task :app:generatePackageList
+> Task :app:preBuild
+> Task :app:preDebugBuild
+> Task :app:generateDebugBuildConfig
+> Task :metakeep-react-native-sdk:preBuild UP-TO-DATE
+> Task :metakeep-react-native-sdk:preDebugBuild UP-TO-DATE
+> Task :react-native-get-random-values:preBuild UP-TO-DATE
+> Task :react-native-get-random-values:preDebugBuild UP-TO-DATE
+> Task :metakeep-react-native-sdk:writeDebugAarMetadata
+> Task :react-native-get-random-values:writeDebugAarMetadata
+> Task :app:generateDebugResValues
+> Task :app:checkDebugAarMetadata
+> Task :metakeep-react-native-sdk:generateDebugResValues
+> Task :metakeep-react-native-sdk:generateDebugResources
+> Task :metakeep-react-native-sdk:packageDebugResources
+> Task :react-native-get-random-values:generateDebugResValues
+> Task :react-native-get-random-values:generateDebugResources
+> Task :react-native-get-random-values:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :metakeep-react-native-sdk:extractDeepLinksDebug
+> Task :react-native-get-random-values:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+
+> Task :react-native-get-random-values:processDebugManifest
+package="org.linusu" found in source AndroidManifest.xml: /home/passbird/Desktop/React-Native-App-EVM/node_modules/react-native-get-random-values/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="org.linusu" from the source AndroidManifest.xml: /home/passbird/Desktop/React-Native-App-EVM/node_modules/react-native-get-random-values/android/src/main/AndroidManifest.xml.
+
+> Task :metakeep-react-native-sdk:processDebugManifest
+> Task :app:mergeDebugResources
+> Task :metakeep-react-native-sdk:compileDebugLibraryResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :react-native-get-random-values:compileDebugLibraryResources
+> Task :metakeep-react-native-sdk:parseDebugLocalResources
+> Task :metakeep-react-native-sdk:generateDebugBuildConfig
+> Task :react-native-get-random-values:parseDebugLocalResources
+> Task :react-native-get-random-values:generateDebugBuildConfig
+> Task :metakeep-react-native-sdk:javaPreCompileDebug
+> Task :react-native-get-random-values:javaPreCompileDebug
+> Task :app:javaPreCompileDebug
+> Task :react-native-get-random-values:generateDebugRFile
+> Task :metakeep-react-native-sdk:generateDebugRFile
+> Task :app:mergeDebugShaders
+> Task :react-native-get-random-values:compileDebugJavaWithJavac FAILED
+> Task :app:processDebugManifestForPackage
+> Task :metakeep-react-native-sdk:compileDebugKotlin
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+42 actionable tasks: 37 executed, 5 up-to-date
+
+info 💡 Tip: Make sure that you have set up your development environment correctly, by running npx react-native doctor. To read more about doctor command visit: https://github.com/react-native-community/cli/blob/main/packages/cli-doctor/README.md#doctor 
+
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':react-native-get-random-values:compileDebugJavaWithJavac'.
+> Could not resolve all files for configuration ':react-native-get-random-values:androidJdkImage'.
+   > Failed to transform core-for-system-modules.jar to match attributes {artifactType=_internal_android_jdk_image, org.gradle.libraryelements=jar, org.gradle.usage=java-runtime}.
+      > Execution failed for JdkImageTransform: /home/passbird/Android/Sdk/platforms/android-33/core-for-system-modules.jar.
+         > Error while executing process /usr/lib/jvm/java-21-openjdk-amd64/bin/jlink with arguments {--module-path /home/passbird/.gradle/caches/transforms-3/8ed03f036454bf078df2a49516767b53/transformed/output/temp/jmod --add-modules java.base --output /home/passbird/.gradle/caches/transforms-3/8ed03f036454bf078df2a49516767b53/transformed/output/jdkImage --disable-plugin system-modules}
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 4m 6s
+error Failed to install the app. Command failed with exit code 1: ./gradlew app:installDebug -PreactNativeDevServerPort=8081 FAILURE: Build failed with an exception. * What went wrong:
+Execution failed for task ':react-native-get-random-values:compileDebugJavaWithJavac'.
+> Could not resolve all files for configuration ':react-native-get-random-values:androidJdkImage'. > Failed to transform core-for-system-modules.jar to match attributes {artifactType=_internal_android_jdk_image, org.gradle.libraryelements=jar, org.gradle.usage=java-runtime}. > Execution failed for JdkImageTransform: /home/passbird/Android/Sdk/platforms/android-33/core-for-system-modules.jar. > Error while executing process /usr/lib/jvm/java-21-openjdk-amd64/bin/jlink with arguments {--module-path /home/passbird/.gradle/caches/transforms-3/8ed03f036454bf078df2a49516767b53/transformed/output/temp/jmod --add-modules java.base --output /home/passbird/.gradle/caches/transforms-3/8ed03f036454bf078df2a49516767b53/transformed/output/jdkImage --disable-plugin system-modules} * Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org. BUILD FAILED in 4m 6s.
+info Run CLI with --verbose flag for more details.
