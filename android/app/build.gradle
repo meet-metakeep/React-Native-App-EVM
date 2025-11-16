@@ -85,7 +85,7 @@ android {
         // Configure MetaKeep Domain and Scheme
         // metakeepDomain: Replace <app_id> with your app's id which you can find in the developer console
         // metakeepScheme: Replace com.metakeepdemo with your app's package name
-        manifestPlaceholders = [metakeepDomain: "a071e2fe-54b8-41f2-8082-137e2073085e.auth.metakeep.xyz", metakeepScheme: "com.metakeepdemo"]
+        manifestPlaceholders = [metakeepDomain: "<your-app-id>.auth.metakeep.xyz", metakeepScheme: "com.metakeepdemo"]
     }
     signingConfigs {
         debug {

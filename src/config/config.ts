@@ -5,7 +5,7 @@
 
 export const CONFIG = {
   // MetaKeep SDK Configuration
-  METAKEEP_APP_ID: 'a071e2fe-54b8-41f2-8082-137e2073085e',
+  METAKEEP_APP_ID: '', // TODO: Add your MetaKeep App ID here
 
   // Network Configuration (Sepolia Testnet)
   RPC_URL: 'https://ethereum-sepolia-rpc.publicnode.com', // Primary RPC
